@@ -48,7 +48,7 @@ class LinkedList:
             result = result + str(current_node.value.name) # Normally, LinkedList element is integer
         return result
 
-def run02():
+def run02(): # another one
     plume_of_death = Artifact('Plume of Death', "Shimenawa's Reminiscence", 'ATK %')
     flower_of_life = Artifact('Flower of Life', "Royal Flora", 'HP %')
     sands_of_eon = Artifact('Sands of Eon', "Noblesse Oblige", 'Element Mastery')

@@ -8,6 +8,7 @@ def find_max1():
 
     while i < num:
         my_list.append(random.randint(0,10))
+        # is used to add a randomly generated integer between 0 and 10 (inclusive) to a list named my_list in Python
         i += 1
 
     max1 = 0
@@ -18,7 +19,7 @@ def find_max1():
     print('Max is:',max1)
 
 def find_max2():
-    num = 50
+    num = 5
     i = 0
     my_list = []
 
@@ -32,7 +33,9 @@ def find_max2():
         if my_list.count(x) > 0: # x is in the my_list or not
             max2 = x
             break
+    print('This list include:', my_list)
     print('Max is:', max2)
+#This method will start loop from 10 till to 0.
 
 def run():
     start_time = time()  # record the starting time
@@ -63,6 +66,7 @@ def sum2(num):
         return 1
     else:
         return num + sum2(num - 1)
+# 5 + 4 + 3 + 2 + 1
 
 def factorial(num):
     if num == 0:
@@ -71,7 +75,7 @@ def factorial(num):
         return 1
     else:
         return num * factorial(num - 1)
-
+#5*4*3*2*1=120
 def run2():
     print(sum1(5))
     print(sum2(5))
