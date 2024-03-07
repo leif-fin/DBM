@@ -8,32 +8,30 @@ def insert(root, key):
     if root is None:
         return Node(key)
     else:
-        if root.val < key:
-            root.right = insert(root.right, key)
-            print('right')
-            print(key)
-        else:
+        if key < root.val:
+            print(f"Going left from {root.val} to insert {key}")
             root.left = insert(root.left, key)
-            print('left')
-            print(key)
+        else:
+            print(f"Going right from {root.val} to insert {key}")
+            root.right = insert(root.right, key)
     return root
 
 def search(root, key):
+    # This function remains unchanged, as it was not part of the confusion.
     if root is None or root.val == key:
-        return root
-    if root.val < key:
+        return True  # Return True if found
+    if key < root.val:
+        return search(root.left, key)
+    else:
         return search(root.right, key)
-    return search(root.left, key)
 
-
+# Create the root node
 root = Node(50)
-insert(root, 30)
-insert(root, 20)
-insert(root, 40)
-insert(root, 70)
-insert(root, 60)
-insert(root, 80)
-insert(root, 10)
+# Perform insertions
+insertions = [30, 20, 40, 70, 60, 80, 10]
+for key in insertions:
+    insert(root, key)
+    print("")
 
 # Search for a value
 if search(root, 60):

@@ -34,7 +34,7 @@ def dijkstra(graph, start):
                 predecessor[childNode] = minNode
         unseenNodes.pop(minNode)
 
-    currentNode = 'E'  # Suppose we want the final node to be F
+    currentNode = 'F'  # Suppose we want the final node to be F
     while currentNode != start:
         try:
             path.insert(0, currentNode)
@@ -43,9 +43,9 @@ def dijkstra(graph, start):
             print('Path not reachable')
             break
     path.insert(0, start)
-    if shortest_distance['E'] != infinity:
+    if shortest_distance['F'] != infinity:
         print("Shortest distance is " + str(shortest_distance['F']))
         print("And the path is " + str(path))
 
 
-dijkstra(graph, 'D')
+dijkstra(graph, 'B')
